@@ -18,21 +18,6 @@ This project represents a simplified component of a larger Visual Verification E
 - Produce an explainable authenticity verdict
 - Maintain modular, production-ready architecture
 
-## Project Structure
-image_auth_checker/
-│
-├── checker/
-│   ├── __pycache__.py
-│   ├── hasher.py          # Perceptual hashing (pHash)
-│   ├── similarity.py      # Image similarity comparison
-│   ├── exif_reader.py     # EXIF metadata extraction
-│   ├── classifier.py      # Decision logic
-│   └── engine.py          # Orchestration layer
-│
-├── reference_images/      # Known / stock / comparison images
-├── test_image.jpg         # Image to analyze
-└── run.py                 # Entry point
-
 ## Installation
 ### Requirements
 - Python 3.9+
@@ -71,11 +56,8 @@ image_auth_checker/
     - Missing or stripped EXIF data is treated as a risk signal.
 
 4. Decision Logic
-    The final verdict is determined using simple, explainable rules:
-
-    If max_similarity ≥ 85% OR EXIF metadata is missing:
-        Suspicious Image
-    Else:
-        Likely Original
+    - The final verdict is determined using simple, explainable rules:
+        - If max_similarity ≥ 85% OR EXIF metadata is missing: Suspicious Image
+        - Else: Likely Original
 
 This logic can be easily extended or replaced with a scoring or ML-based classifier.
