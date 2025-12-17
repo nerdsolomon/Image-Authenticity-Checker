@@ -4,9 +4,9 @@ from checker.exif_reader import ExifReader
 from checker.classifier import ImageClassifier
 from checker.engine import ImageAuthenticityEngine
 
-TARGET_IMAGE_0 = "test_image.jpeg"
-TARGET_IMAGE_1 = "test_image_1.jpg"
-TARGET_IMAGE_2 = "test_image_2.png"
+TARGET_IMAGE_0 = "test_images/test_image.jpeg"
+TARGET_IMAGE_1 = "test_images/test_image_1.jpg"
+TARGET_IMAGE_2 = "test_images/test_image_2.png"
 REFERENCE_DIR = "reference_images"
 
 hasher = ImageHasher()
